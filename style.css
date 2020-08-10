@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.slider {
+  width: 1024px;
+  height: 512px;
+  display: flex;
+  position: relative;
+  background-color: lightgray;
+}
+.slider__after {
+  height: 512px;
+  width: 1024px;
+  background: no-repeat center center fixed;
+  background-size: cover;
+  position: absolute;
+  z-index: 2;
+}
+.slider__after:after {
+  content: 'After';
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.1);
+}
+.slider__before {
+  height: 512px;
+  width: 1024px;
+  background: no-repeat center center fixed;
+  background-size: cover;
+  position: absolute;
+  text-align: end;
+}
+.slider__before:after {
+  content: 'Before';
+  z-index: 100;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.1);
+}
+.slider__resize {
+  width: 5px;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: e-resize;
+}
+.slider__resize:after {
+  content: '>';
+  top: 50%;
+  position: absolute;
+  font-weight: 900;
+  font-size: 30px;
+  left: 5px;
+}
+.slider__resize:before {
+  content: '<';
+  top: 50%;
+  position: absolute;
+  font-weight: 900;
+  font-size: 30px;
+  right: 5px;
+}
+/*# sourceMappingURL=style.css.map */
